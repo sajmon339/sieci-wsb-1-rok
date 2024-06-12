@@ -1,0 +1,51 @@
+<Window x:Class="Zadanie3.Views.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edytuj" Height="350" Width="450">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10">
+                <!-- Tytuł -->
+                <TextBlock Text="Tytuł:" Margin="5,5,0,0"/>
+                <TextBox x:Name="TitleTextBox" Text="{Binding Title, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+                <!-- Reżyser/Autor -->
+                <TextBlock Text="Reżyser/Autor:" Margin="5,10,0,0"/>
+                <TextBox x:Name="DirectorOrAuthorTextBox" Text="{Binding DirectorOrAuthor, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+                <!-- Studio/Wydawca -->
+                <TextBlock Text="Studio/Wydawca:" Margin="5,10,0,0"/>
+                <TextBox x:Name="StudioOrPublisherTextBox" Text="{Binding StudioOrPublisher, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+                <!-- Nośnik -->
+                <TextBlock Text="Nośnik:" Margin="5,10,0,0"/>
+                <ComboBox x:Name="MediaTypeComboBox" SelectedItem="{Binding MediaType, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="5">
+                    <ComboBoxItem Content="VHS"/>
+                    <ComboBoxItem Content="DVD"/>
+                    <ComboBoxItem Content="BluRay"/>
+                    <ComboBoxItem Content="Kaseta"/>
+                    <ComboBoxItem Content="CD"/>
+                    <ComboBoxItem Content="Pendrive"/>
+                </ComboBox>
+
+                <!-- Długość -->
+                <TextBlock Text="Długość (hh:mm:ss):" Margin="5,10,0,0"/>
+                <TextBox x:Name="DurationTextBox" Text="{Binding Duration, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+
+                <!-- Data Wydania -->
+                <TextBlock Text="Data Wydania:" Margin="5,10,0,0"/>
+                <DatePicker x:Name="ReleaseDatePicker" SelectedDate="{Binding ReleaseDate, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Click="OnSaveClick" Content="Zapisz" Margin="5"/>
+            <Button Click="OnCancelClick" Content="Anuluj" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

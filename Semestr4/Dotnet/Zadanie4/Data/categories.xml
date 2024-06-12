@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CategoryData>
+    <Categories>
+        <Category>
+            <Name>Samochody osobowe</Name>
+            <Description>Pojazdy do przewozu osób</Description>
+            <Subcategories>
+                <Subcategory>
+                    <Name>Toyota</Name>
+                    <Description>Japoński producent samochodów</Description>
+                    <Details>
+                        <string>Macierzysty koncern: Toyota Motor Corporation</string>
+                        <string>Data powstania: 1937</string>
+                        <string>Kraj produkcji: Japonia</string>
+                    </Details>
+                    <Elements>
+                        <Element>
+                            <Model>Corolla</Model>
+                            <Year>2020</Year>
+                            <EngineCapacity>1.8L</EngineCapacity>
+                            <DriveType>FWD</DriveType>
+                        </Element>
+                        <Element>
+                            <Model>Camry</Model>
+                            <Year>2021</Year>
+                            <EngineCapacity>2.5L</EngineCapacity>
+                            <DriveType>AWD</DriveType>
+                        </Element>
+                    </Elements>
+                </Subcategory>
+                <Subcategory>
+                    <Name>Honda</Name>
+                    <Description>Japoński producent samochodów</Description>
+                    <Details>
+                        <string>Macierzysty koncern: Honda Motor Co., Ltd.</string>
+                        <string>Data powstania: 1946</string>
+                        <string>Kraj produkcji: Japonia</string>
+                    </Details>
+                    <Elements>
+                        <Element>
+                            <Model>Civic</Model>
+                            <Year>2019</Year>
+                            <EngineCapacity>2.0L</EngineCapacity>
+                            <DriveType>FWD</DriveType>
+                        </Element>
+                        <Element>
+                            <Model>Accord</Model>
+                            <Year>2020</Year>
+                            <EngineCapacity>2.4L</EngineCapacity>
+                            <DriveType>AWD</DriveType>
+                        </Element>
+                    </Elements>
+                </Subcategory>
+            </Subcategories>
+        </Category>
+    </Categories>
+</CategoryData>

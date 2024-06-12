@@ -1,0 +1,56 @@
+﻿<Window x:Class="Zadanie1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <!-- Definicja kolorów -->
+        <SolidColorBrush x:Key="LabelTextColor" Color="#900"/>
+        <SolidColorBrush x:Key="ButtonBackground" Color="#EEE"/>
+        <SolidColorBrush x:Key="ButtonHoverColor" Color="#99D"/>
+        <SolidColorBrush x:Key="ButtonPressedColor" Color="#99F"/>
+        <SolidColorBrush x:Key="ButtonStaticColor" Color="#DDF"/>
+
+        <!-- Style dla Label -->
+        <Style x:Key="BaseLabelStyle" TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+        <Style x:Key="SpecialLabelStyle" BasedOn="{StaticResource BaseLabelStyle}" TargetType="Label">
+            <Setter Property="Foreground" Value="{StaticResource LabelTextColor}"/>
+        </Style>
+
+        <!-- Style dla Button -->
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource ButtonBackground}"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <Style x:Key="WrapPanelButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Background" Value="{StaticResource ButtonStaticColor}"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource ButtonHoverColor}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{StaticResource ButtonPressedColor}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <!-- WrapPanel na górze okna -->
+        <WrapPanel Grid.Row="0" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Top">
+            <Button Style="{StaticResource WrapPanelButtonStyle}" Content="Przycisk 1" Margin="5"/>
+            <Button Style="{StaticResource WrapPanelButtonStyle}" Content="Przycisk 2" Margin="5"/>
+            <Button Style="{StaticResource WrapPanelButtonStyle}" Content="Przycisk 3" Margin="5"/>
+        </WrapPanel>
+
+        <!-- StackPanel po lewej stronie okna -->
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="10" HorizontalAlignment="Left">
+            <Label Style="{StaticResource BaseLabelStyle}" Content="Grupa 1"/>
+            <Label Style="{StaticResource SpecialLabelStyle}" Content="Grupa 2"/>
+            <Label Style="{StaticResource BaseLabelStyle}" Content="Grupa 3"/>
+        </StackPanel>
+    </Grid>
+</Window>
