@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Categories>
+	<Category>
+		<Name>Category1</Name>
+		<Description>Description1</Description>
+		<Subcategories>
+			<Subcategory>
+				<Name>Subcategory1</Name>
+				<Description>SubDescription1</Description>
+			</Subcategory>
+			<Subcategory>
+				<Name>Subcategory2</Name>
+				<Description>SubDescription2</Description>
+			</Subcategory>
+		</Subcategories>
+	</Category>
+	<Category>
+		<Name>Category2</Name>
+		<Description>Description2</Description>
+		<Subcategories>
+			<Subcategory>
+				<Name>Subcategory3</Name>
+				<Description>SubDescription3</Description>
+			</Subcategory>
+		</Subcategories>
+	</Category>
+</Categories>
